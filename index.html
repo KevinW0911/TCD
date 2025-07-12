@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15分鐘時間記錄器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📅 任務時間倒數計時器</h1>
+        
+        <div class="task-input-section">
+            <div class="input-group">
+                <label for="taskInput">任務項目：</label>
+                <input type="text" id="taskInput" placeholder="輸入要執行的任務..." />
+            </div>
+            
+            <button id="startButton" class="start-btn">開始 15 分鐘計時</button>
+            
+            <div class="input-group">
+                <label for="notesInput">備註：</label>
+                <textarea id="notesInput" placeholder="任務備註..."></textarea>
+            </div>
+        </div>
+
+        <div class="timer-section">
+            <div class="timer-display">
+                <div id="timeLeft">15:00</div>
+                <div class="status" id="timerStatus">準備開始</div>
+            </div>
+            
+            <div class="time-info">
+                <div class="time-item">
+                    <label>開始時間：</label>
+                    <span id="startTime">--:--</span>
+                </div>
+                <div class="time-item">
+                    <label>結束時間：</label>
+                    <span id="endTime">--:--</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="control-section" id="controlSection" style="display: none;">
+            <button id="pauseButton" class="control-btn">暫停</button>
+            <button id="stopButton" class="control-btn stop">停止</button>
+        </div>
+
+        <div class="completion-section" id="completionSection" style="display: none;">
+            <h3>⏰ 時間到！</h3>
+            <p>您想要繼續這個任務還是開始新任務？</p>
+            <div class="choice-buttons">
+                <button id="continueButton" class="choice-btn continue">繼續該任務 15 分鐘</button>
+                <button id="nextTaskButton" class="choice-btn next">進行下一個任務</button>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <h3>📋 任務記錄</h3>
+            <div id="taskHistory" class="task-history">
+                <p class="no-records">尚無任務記錄</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
